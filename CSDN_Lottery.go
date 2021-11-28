@@ -86,7 +86,7 @@ func main() {
 
 func getTotalNum() int {  // 获取全部的一级评论数目
 	client := &http.Client{}
-	req, err := http.NewRequest("POST", "https://blog.csdn.net/phoenix/web/v1/comment/list/120067923?page=1&size=10", nil)
+	req, err := http.NewRequest("POST", "https://blog.csdn.net/phoenix/web/v1/comment/list/121340420?page=1&size=100", nil)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -112,7 +112,7 @@ func Spider(page int) []LuckyPerson {  // 传入页数，一页一页爬取
 	var tmp []LuckyPerson
 	p :=strconv.Itoa(page)
 	client := &http.Client{}
-	reqSpider, err := http.NewRequest("POST", "https://blog.csdn.net/phoenix/web/v1/comment/list/120067923?page="+p+"&size=10", nil)
+	reqSpider, err := http.NewRequest("POST", "https://blog.csdn.net/phoenix/web/v1/comment/list/121340420?page="+p+"&size=100", nil)
 	if err != nil {
 		log.Fatal(err)
 	}
