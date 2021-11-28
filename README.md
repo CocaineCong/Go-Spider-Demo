@@ -8,3 +8,4 @@
 go build main.go
 ```
 
+blink是爬取CSDN的blink评论的，另一个是爬取博客评论
