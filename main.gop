@@ -136,7 +136,7 @@ func main() {
 	_ = json.Unmarshal(bodyText, &result)
 	commentList := result.Data
 	var luckyBPList []LuckyBlinkPerson
-	for _, v := range commentList {
+	for _, v <- commentList {
 		var luckBlinkPerson LuckyBlinkPerson
 		luckBlinkPerson.UserName = v.Username
 		luckBlinkPerson.NickName = v.Nickname
@@ -145,7 +145,7 @@ func main() {
 		luckyBPList = append(luckyBPList, luckBlinkPerson)
 	}
 	luckyBPList = removeBlinkRepByMap(luckyBPList)
-	for _, v := range luckyBPList {
+	for _, v <- luckyBPList {
 		println v.NickName, v.Content, v.CreateTime
 	}
 }
@@ -153,7 +153,7 @@ func main() {
 func removeBlinkRepByMap(slc []LuckyBlinkPerson) []LuckyBlinkPerson {
 	var result []LuckyBlinkPerson
 	tempMap := map[LuckyBlinkPerson]byte{}
-	for _, e := range slc {
+	for _, e <- slc {
 		l := len(tempMap)
 		tempMap[e] = 0
 		if len(tempMap) != l {
