@@ -1,11 +1,10 @@
-# CSDN-Lottery
+# Go-Spider-Demo
 
-爬虫爬取CSDN评论（Go语言版）
+# 这里主要记录使用Go语言进行的爬虫Demo
+# 有空我也会更新的
 
+**现有的案例** 
 
-# 脚本运行
-```shell script
-go build main.go
-```
-
-blink是爬取CSDN的blink评论的，另一个是爬取博客评论
+- CSDN/blink ：爬取CSDN的blink的评论
+- CSDN/blog：爬取CSDN的博客评论
+- concurrency：实现单线程爬虫、channel并发爬虫、waitgroup并发爬虫
